@@ -1,6 +1,4 @@
 import { Module } from '@nestjs/common';
-import { AuthServiceController } from './auth-service.controller';
-import { AuthServiceService } from './auth-service.service';
 import {ConfigModule, ConfigService} from "@nestjs/config";
 import {TypeOrmModule} from "@nestjs/typeorm";
 import {getDbConfig} from "./configs";
@@ -17,7 +15,5 @@ import {getDbConfig} from "./configs";
           useFactory: getDbConfig,
       })
   ],
-  controllers: [AuthServiceController],
-  providers: [AuthServiceService],
 })
-export class AuthServiceModule {}
+export class AppModule {}
