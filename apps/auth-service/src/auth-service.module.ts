@@ -3,7 +3,7 @@ import { AuthServiceController } from './auth-service.controller';
 import { AuthServiceService } from './auth-service.service';
 import {ConfigModule, ConfigService} from "@nestjs/config";
 import {TypeOrmModule} from "@nestjs/typeorm";
-import {getDbConfig} from "./configs/database.config";
+import {getDbConfig} from "./configs";
 
 @Module({
   imports: [
